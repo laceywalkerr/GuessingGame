@@ -6,7 +6,7 @@ namespace GuessingGame
     {
         static void Main(string[] args)
         {
-            int MagicNumber = new Random().Next(1, 100);
+            int MagicNumber = 42;
 
             Console.WriteLine("Welcome to the Guessing Game!");
             Console.WriteLine("--------------------------------------------");
@@ -15,7 +15,17 @@ namespace GuessingGame
             string guess = Console.ReadLine();
             int UserNumber = int.Parse(guess);
 
-            Console.WriteLine("You guessed " + UserNumber);
+            // Console.WriteLine("I was thinking of " + MagicNumber);
+            // Console.WriteLine("You guessed " + UserNumber);
+
+            if (UserNumber == MagicNumber)
+            {
+                Console.WriteLine("You got it right! Are you a wizard?");
+            }
+            else
+            {
+                Console.WriteLine("Sorry, that's not the number I was thinking of.");
+            }
         }
 
     }
