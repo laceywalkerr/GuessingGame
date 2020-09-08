@@ -15,6 +15,19 @@ namespace GuessingGame
             string guess = Console.ReadLine();
             int UserNumber = int.Parse(guess);
 
+            int i = 1;
+            while (i <= 4)
+            {
+                Console.WriteLine(i);
+                i++;
+            }
+
+            // int attempts = 4;
+            // for (int i = 0; i < attempts; i++)
+            // {
+            //     Console.WriteLine($"Try again: {attempts - i - 1} more time");
+            // }
+
             // Console.WriteLine("I was thinking of " + MagicNumber);
             // Console.WriteLine("You guessed " + UserNumber);
 
@@ -24,8 +37,10 @@ namespace GuessingGame
             }
             else
             {
-                Console.WriteLine("Sorry, that's not the number I was thinking of.");
+                Console.WriteLine("Sorry, that's not the number I was thinking of. You can try " +
+                    i + " more times.");
             }
+
         }
 
     }
